@@ -5,7 +5,7 @@
  *
  */
 
-// Disables de file editor porvided in the administration panel.
+// Disables de file editor provided in the administration panel.
 define( 'DISALLOW_FILE_EDIT', true );
 
 // Force SSL conection in admin panel.
@@ -94,3 +94,29 @@ define('WP_SITEURL', 'http://www.example.com');
 
 // Keep only the original set of image files, not all edited versions.
 define( 'IMAGE_EDIT_OVERWRITE', true );
+
+// Changes the wp-content path.
+define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/ext' ); // Path relative to this file.
+define( 'WP_CONTENT_URL', 'http://example.com/ext' ); // Absolute path.
+
+/**
+ * Changes the plugins path.
+ * The content folder should be the same as the new wp-content folder used before.
+ * In this case is called 'ext'.
+ */
+define( 'WP_PLUGIN_DIR', dirname(__FILE__) . '/ext/plugins' ); // Relative path to this file.
+define( 'WP_PLUGIN_URL', 'http://example.com/ext/plugins' ); // Absolute path.
+define( 'PLUGINDIR', dirname(__FILE__) . '/ext/plugins' ); // Relative path to this file.
+
+// Changes theme path. This path is relative to the root folder.
+register_theme_directory( dirname( __FILE__ ) . '/my-themes' );
+
+// Changes the uploads directory. This path is relative to the root folder.
+define( 'UPLOADS', 'uploads' );
+
+// Changes the Must Use plugins path.
+define( 'WPMU_PLUGIN_DIR', dirname(__FILE__) . '/ext/builtin' );
+define( 'WPMU_PLUGIN_URL', 'http://example.com/ext/builtin' );
+
+// Define the default fallback theme.
+define('WP_DEFAULT_THEME', 'twentyeleven');
