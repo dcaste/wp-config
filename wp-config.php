@@ -88,7 +88,7 @@ define( 'WP_CRON_LOCK_TIMEOUT', 60 );
  *
  */
 
-// Set the WP home and Site URL.
+// Overrides the WP home and Site URL. This options does not change it in the database.
 define('WP_HOME', 'http://www.example.com');
 define('WP_SITEURL', 'http://www.example.com');
 
