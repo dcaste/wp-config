@@ -34,14 +34,6 @@ define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', false );
 @ini_set( 'display_errors', 0 );
 
-// Display the amount of database queries in the admin panel.
-if ( current_user_can( 'administrator' ) ) {
-  global $wpdb;
-  echo '<pre>';
-  print_r( $wpdb->queries );
-  echo '</pre>';
-} )
-
 /**
  * Performance options.
  *
