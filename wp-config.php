@@ -39,13 +39,13 @@ define( 'WP_DEBUG_DISPLAY', false );
  *
  */
 
-// Modify autosave interval in seconds.
+// Modify autosave interval in seconds. This needs to be inserted above the ‘ABSPATH’ otherwise it won’t work.
 define( 'AUTOSAVE_INTERVAL', 160 );
 
-// Specify the amount of post revisions to be saved.
+// Specify the amount of post revisions to be saved. This needs to be inserted above the ‘ABSPATH’ otherwise it won’t work.
 define( 'WP_POST_REVISIONS', 3 );
 
-// Disable post revisions completely.
+// Disable post revisions completely. This needs to be inserted above the ‘ABSPATH’ otherwise it won’t work.
 define( 'WP_POST_REVISIONS', false );
 
 // Change the amount of days you want to keep the thrash before delete it comopletely.
